@@ -17,38 +17,29 @@ Once the project moves into development, the press release can be used as a touc
  -->
 
 ## InvestCompare ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
 
 ## Save and compare your investment strategies ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
   With InvestComparer people can save and keep track of their individual investment strategies.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
   Have you ever thought about where to put your money to gain returns but still be safe. InvestComparer gives you basic advice and also enables you to visualize your own strategies. At a later point in time you can always come back, compare your approaches and even track your further testing.
 
 ## Problem ##
-  > Describe the problem your product solves.
   Many people are lost in the jungle of investment opportunities for their money. There are so many possibilities popping up that it is hard to compare them in an objective way and know what really works.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
   InvestCompare shows basic, proven approaches and helps you to keep track of your own ideas. Your preferred approaches are stored, can be easily compared and used as future reference points to optimize your own investment strategy.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
   "Invest.js enables you to take full ownership of your investment strategies. Tracking and optimizing your investments was never easier than with Invest.js"
 
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
   To get started simply go to invest-js.com, check out the provided basic investment strategies.
   Once you create an account you can add any of those to your preferred strategies or simply create your own combination. You can come back at any point of time in the future to compare and improve your portfolios.
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
   "I always got lost in the jungle of opportunities to invest my money. Invest.js now finally gives me great way to visualize and keep track of my favourite strategies."
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
   "Go to invest-js.com right now and check out the provided portfolios. It's your chance right now to rocket-fuel your investment style!"
