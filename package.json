@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/chrizzzer/2016-04-mvp#readme",
   "dependencies": {
+    "angular-ui-router": "^0.3.0",
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "mongoose": "^4.4.19",

@@ -1,4 +1,4 @@
-<html ng-app>
+<html ng-app="investApp">
 <head>
   <title>Invest.js</title>
 </head>
@@ -6,8 +6,16 @@
   <h1>Invest.js</h1>
 
   <input type="test" name="test" ng-model="showInput">
-  {{showInput}}
+  <div>
+    {{showInput}}
+  </div>
+
+  <div ui-view></div>
+
 
   <script src="./bower_components/angular/angular.js"></script>
+  <script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/chartController.js"></script>
 </body>
 </html>
