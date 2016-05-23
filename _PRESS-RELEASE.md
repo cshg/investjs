@@ -42,4 +42,4 @@ Once the project moves into development, the press release can be used as a touc
   "I always got lost in the jungle of opportunities to invest my money. Invest.js now finally gives me great way to visualize and keep track of my favourite strategies."
 
 ## Closing and Call to Action ##
-  "Go to invest-js.com right now and check out the provided portfolios. It's your chance right now to rocket-fuel your investment style!"
+  Go to invest-js.com right now and check out the provided portfolios. It's your chance right now to rocket-fuel your investment style!
