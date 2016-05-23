@@ -5,7 +5,6 @@ var app = angular.module('investApp', [
 app.config(function($stateProvider, $urlRouterProvider){
 
   $urlRouterProvider.otherwise('/chart');
-  console.log($stateProvider);
 
   $stateProvider
     .state('chart', {
