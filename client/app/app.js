@@ -1,16 +1,16 @@
 var app = angular.module('investApp', [
-  'chartController',
+  'portfolioController',
   'ui.router']);
 
 app.config(function($stateProvider, $urlRouterProvider){
 
-  $urlRouterProvider.otherwise('/chart');
+  $urlRouterProvider.otherwise('/portfolio1');
 
   $stateProvider
-    .state('chart', {
-      url: '/chart',
-      templateUrl: 'app/chart.html',
-      controller: 'chartController'
+    .state('p1', {
+      url: '/portfolio1',
+      templateUrl: 'app/portfolio.html',
+      controller: 'portfolioController'
     })
 });
 
