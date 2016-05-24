@@ -33,14 +33,13 @@ module.exports = {
       from: '"InvestJS" <info@investjs.com>', // sender address
       to: 'christian.s.haug@gmail.com', // list of receivers
       subject: 'Your new Portfolio', // Subject line
-      text: 'Your new Portfolio has been created. Make the following investments to follow your strategy.', // plaintext body
-      html: '<b>Test</b>' // html body
-    };
+      html: 'Your new Portfolio has been created. To use your newly created strategy make the following investments: ' + req.body.stocks.total + ' in Stocks and ' + req.body.stocks.total + ' in bonds.'
+      };
     client.sendMail(email, function(err, info) {
       if (err) {
         console.error('mail not sent', err);
       } else {
-        console.log('Message sent:', + info.response);
+        console.log('Message sent:', + info);
       }
     });
   }

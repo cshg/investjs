@@ -27,6 +27,31 @@ function portfolioController($scope, $http) {
     [4000, 4000 * 1.03 , 4000 * 1.03 * 1.03, 4000 * Math.pow(1.03, 3), 4000 * Math.pow(1.03, 4), 4000 * Math.pow(1.03, 5), 4000 * Math.pow(1.03, 6)]
   ];
 
+  $scope.changeRisk = function(selectRisk) {
+    console.log(selectRisk);
+    if (selectRisk === 'high') {
+      this.portfolio.stocks.total = 70;
+      this.portfolio.bonds.total = 30;
+    } else if (selectRisk === 'medium') {
+      this.portfolio.stocks.total = 55;
+      this.portfolio.bonds.total = 45;
+    } else if (selectRisk === 'low') {
+      this.portfolio.stocks.total = 35;
+      this.portfolio.bonds.total = 65;
+    }
+  }
+
+  $scope.fetch = function() {
+    return $http({
+      method: 'GET',
+      url: '/fetch',
+    })
+    .then(function(res) {
+      $scope.data.portfolios = res.data;
+      return res;
+    })
+  }();
+
   $scope.save = function(portfolio) {
     return $http({
       method: 'POST',
@@ -37,19 +62,7 @@ function portfolioController($scope, $http) {
       console.log('Portfolio sent', portfolio);
       return res;
     });
-  },
-
-  $scope.fetch = function() {
-    return $http({
-      method: 'GET',
-      url: '/fetch',
-    })
-    .then(function(res) {
-      $scope.data.portfolios = res.data;
-      console.log($scope.data);
-      return res;
-    })
-  }();
+  };
 
   $scope.sendMail = function(portfolio) {
     return $http({
@@ -61,14 +74,19 @@ function portfolioController($scope, $http) {
       console.log('E-Mail data send to server');
       return res;
     })
-  }();
+  };
 
   $scope.onClick = function (points, evt) {
     console.log(points, evt);
   };
 
   $scope.$on('update', function (event, chart) {
-    console.log(event);
-  console.log(chart);
-});
+  });
+
+  $scope.slider = {
+  options: {
+    floor: 0,
+    ceil: 100
+  }
+};
 }

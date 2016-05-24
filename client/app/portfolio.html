@@ -2,21 +2,21 @@
   <div class="row" ng-repeat="portfolio in data.portfolios">
     <div class="col-md-4">
       <div>
-        <form class="form-inline" ng-submit='save(portfolio); send(portfolio)'>
+        <form class="form-inline" ng-submit='save(portfolio); sendMail(portfolio)'>
           <div class="form-group">
-            <div class="input-group">
+            <div class="input-group" style="margin-bottom: 8px">
               <div class="input-group-addon">Total value</div>
               <input type="text" class="form-control" placeholder="{{10000}}">
               <div class="input-group-addon">$</div>
             </div>
           </div>
           <div class="form-group">
-            <div class="input-group">
+            <div class="input-group" style="margin-bottom: 8px">
               <div class="input-group-addon">Stocks</div>
               <input type="text" class="form-control" ng-model="portfolio.stocks.total" placeholder="{{portfolio.stocks.total}}">
               <div class="input-group-addon">%</div>
             </div>
-            <div class="input-group">
+            <div class="input-group" style="margin-bottom: 8px">
               <div class="input-group-addon">Bonds</div>
               <input type="text" class="form-control" ng-model="portfolio.bonds.total" placeholder="{{portfolio.bonds.total}}">
               <div class="input-group-addon">%</div>
@@ -24,18 +24,18 @@
           </div>
           <button type="submit" class="btn btn-primary">Save Portfolio</button>
         </form>
-        Risk Profile:
-        <select>
-          <option value="high">High</option>
-          <option value="medium">Medium</option>
-          <option value="low">Low</option>
+        <label for="selectRisk"> Predefined Risk Profile: </label>
+        <select name="portfolio.risk  " ng-model="portfolio.risk" ng-change="changeRisk(portfolio.risk)">
+          <option value="high">High Risk</option>
+          <option value="medium">Medium Risk</option>
+          <option value="low">Low Risk</option>
         </select>
       </div>
     </div>
     <div class="col-md-4">
       <div>
-          Stocks: <rzslider rz-slider-model="portfolio.stocks.total"></rzslider>
-          Bonds: <rzslider rz-slider-model="portfolio.bonds.total"></rzslider>
+          Stocks: <rzslider rz-slider-model="portfolio.stocks.total" rz-slider-options="slider.options"></rzslider>
+          Bonds: <rzslider rz-slider-model="portfolio.bonds.total" rz-slider-options="slider.options"></rzslider>
       </div>
       <canvas id="doughnut" class="chart chart-doughnut" chart-data="[portfolio.stocks.total, portfolio.bonds.total]" chart-labels="pieLabels">
       </canvas>
