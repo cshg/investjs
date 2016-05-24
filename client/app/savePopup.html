@@ -1,35 +1,26 @@
-<div>
-  Your portfolio has been saved with the following allocation:
-
-  <ul>
-    <li>{{portfolio.stocks.total}} in Stocks</li>
-    <li>{{portfolio.bonds.total}} in Bonds</li>
-  </ul>
-
-  <div class="form-group">
-    <div class="input-group" style="margin-bottom: 8px">
-      <div class="input-group-addon">Stocks</div>
-      <input type="text" class="form-control" ng-model="portfolio.stocks.total" placeholder="{{portfolio.stocks.total}}">
-      <div class="input-group-addon">$</div>
-    </div>
-    <div class="input-group" style="margin-bottom: 8px">
-      <div class="input-group-addon">Bonds</div>
-      <input type="text" class="form-control" ng-model="portfolio.bonds.total" placeholder="{{portfolio.bonds.total}}">
-      <div class="input-group-addon">$</div>
-    </div>
+<div style="padding: 15px">
+  <h3>New Portfolio created!</h3>
+  <div style="margin: 15px">
+    Your portfolio will be saved with the following allocation:
   </div>
 
-  <div>
+  <ul class="list-group" style="margin: 15px">
+    <!-- <li class="list-group-item">Risk profile: high</li> -->
+    <li class="list-group-item">{{portfolio.stocks.total * 100}}$ in Stocks</li>
+    <li class="list-group-item">{{portfolio.bonds.total * 100}}$ in Bonds</li>
+  </ul>
+
+  <div style="margin: 15px">
     Here a proposal of assets to realize this investment:
   </div>
 
-  <div>
+  <div style="margin: 15px">
     Do you want to receive those instructions via email?
   </div>
 
-  <div>
-    <button type="submit" class="btn btn-success">Yes, please</button>
-    <button type="submit" class="btn btn-info">No, only save to database</button>
+  <div align="center">
+    <button type="submit" class="btn btn-success" ng-click="sendMail(portfolio) && save(portfolio) && closeThisDialog()">Yes, please</button>
+    <button type="submit" class="btn btn-info" ng-click="save(portfolio) && closeThisDialog()">No, only save to database</button>
   </div>
 
 </div>

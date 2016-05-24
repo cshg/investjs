@@ -21,7 +21,7 @@ function portfolioController($scope, $http, ngDialog) {
   $scope.pieLabels = ['Stocks', 'Bonds'];
 
   $scope.labels = [2016, 2017, 2018, 2019, 2020];
-  $scope.series = ['Series A', 'Series B'];
+  $scope.series = ['Stocks', 'Bonds'];
   $scope.data = [
     [6000, 6000 * 1.06 , 6000 * 1.06 * 1.06, 6000 * Math.pow(1.06, 3), 6000 * Math.pow(1.06, 4), 6000 * Math.pow(1.06, 5), 6000 * Math.pow(1.06, 6)],
     [4000, 4000 * 1.03 , 4000 * 1.03 * 1.03, 4000 * Math.pow(1.03, 3), 4000 * Math.pow(1.03, 4), 4000 * Math.pow(1.03, 5), 4000 * Math.pow(1.03, 6)]
