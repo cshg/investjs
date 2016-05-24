@@ -14,7 +14,7 @@ portfolio.config(['ChartJsProvider', function (ChartJsProvider) {
 
 portfolio.controller('portfolioController', portfolioController);
 
-function portfolioController($scope, $http) {
+function portfolioController($scope, $http, ngDialog) {
   $scope.data = {};
   $scope.data.capital = 10000;
   $scope.investSplit = [60, 40];
@@ -80,8 +80,12 @@ function portfolioController($scope, $http) {
     console.log(points, evt);
   };
 
-  $scope.$on('update', function (event, chart) {
-  });
+  $scope.openPopup = function() {
+    ngDialog.open({
+      template: 'app/savePopup.html',
+      className: 'ngdialog-theme-default'
+    });
+  };
 
   $scope.slider = {
   options: {

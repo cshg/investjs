@@ -1,7 +1,8 @@
 var app = angular.module('investApp', [
   'portfolioController',
   'ui.router',
-  'rzModule']);
+  'rzModule',
+  'ngDialog']);
 
 app.config(function($stateProvider, $urlRouterProvider){
 
