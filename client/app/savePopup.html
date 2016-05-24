@@ -1,3 +1,35 @@
 <div>
-  Saving your Portfolio!
+  Your portfolio has been saved with the following allocation:
+
+  <ul>
+    <li>{{portfolio.stocks.total}} in Stocks</li>
+    <li>{{portfolio.bonds.total}} in Bonds</li>
+  </ul>
+
+  <div class="form-group">
+    <div class="input-group" style="margin-bottom: 8px">
+      <div class="input-group-addon">Stocks</div>
+      <input type="text" class="form-control" ng-model="portfolio.stocks.total" placeholder="{{portfolio.stocks.total}}">
+      <div class="input-group-addon">$</div>
+    </div>
+    <div class="input-group" style="margin-bottom: 8px">
+      <div class="input-group-addon">Bonds</div>
+      <input type="text" class="form-control" ng-model="portfolio.bonds.total" placeholder="{{portfolio.bonds.total}}">
+      <div class="input-group-addon">$</div>
+    </div>
+  </div>
+
+  <div>
+    Here a proposal of assets to realize this investment:
+  </div>
+
+  <div>
+    Do you want to receive those instructions via email?
+  </div>
+
+  <div>
+    <button type="submit" class="btn btn-success">Yes, please</button>
+    <button type="submit" class="btn btn-info">No, only save to database</button>
+  </div>
+
 </div>

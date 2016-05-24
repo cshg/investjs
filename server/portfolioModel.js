@@ -4,6 +4,7 @@ mongoose.connect('mongodb://localhost/portfoliodb');
 
 var portfolioSchema = new mongoose.Schema({
   portfolio: String,
+  capital: Number,
   stocks: {
     total: Number,
     world: {

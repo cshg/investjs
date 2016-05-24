@@ -80,10 +80,13 @@ function portfolioController($scope, $http, ngDialog) {
     console.log(points, evt);
   };
 
-  $scope.openPopup = function() {
+  $scope.openPopup = function(portfolio) {
+    $scope.portfolio = portfolio;
     ngDialog.open({
       template: 'app/savePopup.html',
-      className: 'ngdialog-theme-default'
+      controller: 'portfolioController',
+      className: 'ngdialog-theme-default',
+      scope: $scope
     });
   };
 
