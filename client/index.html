@@ -4,8 +4,24 @@
   <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 </head>
-<body>
-  <h1>Invest.js</h1>
+<body class="container">
+  <h2>Invest.js</h2>
+  <p>Your personal Portfolio Management Tool</p>
+
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        Your Portfolios
+        <!-- <img alt="Brand" src="..."> -->
+      </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a ui-sref="p1">Portfolio 1</a></li>
+      <li><a ui-sref="p2">Portfolio 2</a></li>
+    </ul>
+  </div>
+</nav>
 
   <div ui-view></div>
 
