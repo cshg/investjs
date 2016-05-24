@@ -1,5 +1,9 @@
 ### node etc ###
 
+# Environment variables
+.env
+env.js
+
 # Logs
 logs
 *.log

@@ -50,7 +50,7 @@ function portfolioController($scope, $http) {
     })
     .then(function(res) {
       $scope.data.portfolios = res.data;
-      $scope.data;
+      console.log($scope.data);
       return res;
     })
   }();
@@ -58,4 +58,9 @@ function portfolioController($scope, $http) {
   $scope.onClick = function (points, evt) {
     console.log(points, evt);
   };
+
+  $scope.$on('update', function (event, chart) {
+    console.log(event);
+  console.log(chart);
+});
 }

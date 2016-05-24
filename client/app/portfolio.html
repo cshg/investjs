@@ -13,12 +13,12 @@
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">Stocks</div>
-              <input type="text" class="form-control" ng-model="investSplit[0]" placeholder="{{investSplit[0]}}">
+              <input type="text" class="form-control" ng-model="portfolio.stocks.total" placeholder="{{portfolio.stocks.total}}">
               <div class="input-group-addon">%</div>
             </div>
             <div class="input-group">
               <div class="input-group-addon">Bonds</div>
-              <input type="text" class="form-control" ng-model="investSplit[1]" placeholder="{{investSplit[1]}}">
+              <input type="text" class="form-control" ng-model="portfolio.bonds.total" placeholder="{{portfolio.bonds.total}}">
               <div class="input-group-addon">%</div>
             </div>
           </div>
@@ -34,10 +34,10 @@
     </div>
     <div class="col-md-4">
       <div>
-          Stocks: <rzslider rz-slider-model="investSplit[0]"></rzslider>
-          Bonds: <rzslider rz-slider-model="investSplit[1]"></rzslider>
+          Stocks: <rzslider rz-slider-model="portfolio.stocks.total"></rzslider>
+          Bonds: <rzslider rz-slider-model="portfolio.bonds.total"></rzslider>
       </div>
-      <canvas id="doughnut" class="chart chart-doughnut" chart-data="investSplit" chart-labels="pieLabels">
+      <canvas id="doughnut" class="chart chart-doughnut" chart-data="[portfolio.stocks.total, portfolio.bonds.total]" chart-labels="pieLabels">
       </canvas>
     </div>
     <div class="col-md-4">
