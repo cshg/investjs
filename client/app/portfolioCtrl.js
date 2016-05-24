@@ -27,11 +27,7 @@ function portfolioController($scope, $http) {
     [4000, 4000 * 1.03 , 4000 * 1.03 * 1.03, 4000 * Math.pow(1.03, 3), 4000 * Math.pow(1.03, 4), 4000 * Math.pow(1.03, 5), 4000 * Math.pow(1.03, 6)]
   ];
 
-  $scope.save = function(investSplit) {
-    var portfolio = {
-      stocks: investSplit[0],
-      bonds: investSplit[1]
-    }
+  $scope.save = function(portfolio) {
     return $http({
       method: 'POST',
       url: '/save',
@@ -51,6 +47,18 @@ function portfolioController($scope, $http) {
     .then(function(res) {
       $scope.data.portfolios = res.data;
       console.log($scope.data);
+      return res;
+    })
+  }();
+
+  $scope.sendMail = function(portfolio) {
+    return $http({
+      method: 'POST',
+      url: '/send',
+      data: portfolio
+    })
+    .then(function(res) {
+      console.log('E-Mail data send to server');
       return res;
     })
   }();
