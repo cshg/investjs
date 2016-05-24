@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/portfoliodb');
 
 var portfolioSchema = new mongoose.Schema({
-  name: String,
+  portfolio: String,
   stocks: {
     total: Number,
     world: {

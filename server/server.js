@@ -10,6 +10,7 @@ app.use(express.static('client'));
 app.use(bodyParser.json());
 
 app.get('/', reqHandler.get);
+app.get('/fetch', reqHandler.fetch);
 app.post('/save', reqHandler.post);
 
 app.listen(3000, function() {

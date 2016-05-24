@@ -16,6 +16,6 @@ module.exports = {
     });
   },
   fetch: function() {
-
+    return pModel.find();
   }
 }
