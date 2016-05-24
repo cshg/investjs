@@ -1,6 +1,7 @@
 var app = angular.module('investApp', [
   'portfolioController',
-  'ui.router']);
+  'ui.router',
+  'rzModule']);
 
 app.config(function($stateProvider, $urlRouterProvider){
 
@@ -9,6 +10,21 @@ app.config(function($stateProvider, $urlRouterProvider){
   $stateProvider
     .state('p1', {
       url: '/portfolio1',
+      templateUrl: 'app/portfolio.html',
+      controller: 'portfolioController'
+    })
+    .state('p1.charts', {
+      url: '/portfolio1',
+      templateUrl: 'app/portfolio.html',
+      controller: 'portfolioController'
+    })
+    .state('p2', {
+      url: '/portfolio2',
+      templateUrl: 'app/portfolio.html',
+      controller: 'portfolioController'
+    })
+    .state('p2.charts', {
+      url: '/portfolio2',
       templateUrl: 'app/portfolio.html',
       controller: 'portfolioController'
     })

@@ -4,31 +4,43 @@
       <div>
         <form class="form-inline" ng-submit='save(stocks, bonds)'>
           <div class="form-group">
-            <!-- <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label> -->
+            <div class="input-group">
+              <div class="input-group-addon">Total value</div>
+              <input type="text" class="form-control" placeholder="{{10000}}">
+              <div class="input-group-addon">$</div>
+            </div>
+          </div>
+          <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">Stocks</div>
-              <input type="text" class="form-control" ng-model="stocks" placeholder="{{stocks}}">
+              <input type="text" class="form-control" ng-model="investSplit[0]" placeholder="{{investSplit[0]}}">
               <div class="input-group-addon">%</div>
             </div>
             <div class="input-group">
               <div class="input-group-addon">Bonds</div>
-              <input type="text" class="form-control" ng-model="bonds" placeholder="{{bonds}}">
+              <input type="text" class="form-control" ng-model="investSplit[1]" placeholder="{{investSplit[1]}}">
               <div class="input-group-addon">%</div>
             </div>
           </div>
           <button type="submit" class="btn btn-primary">Save Portfolio</button>
         </form>
+        Risk Profile:
+        <select>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
       </div>
     </div>
-    <div class="col-md-8">
-      Risk Profile:
-      <select>
-        <option value="high">High</option>
-        <option value="medium">Medium</option>
-        <option value="low">Low</option>
-      </select>
-      <canvas id="doughnut" class="chart chart-doughnut" chart-data="pieData" chart-labels="pieLabels">
+    <div class="col-md-4">
+      <div>
+          Stocks: <rzslider rz-slider-model="investSplit[0]"></rzslider>
+          Bonds: <rzslider rz-slider-model="investSplit[1]"></rzslider>
+      </div>
+      <canvas id="doughnut" class="chart chart-doughnut" chart-data="investSplit" chart-labels="pieLabels">
       </canvas>
+    </div>
+    <div class="col-md-4">
       <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-click="onClick">
       </canvas>
     </div>

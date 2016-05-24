@@ -3,7 +3,7 @@ var portfolio = angular.module('portfolioController', ['chart.js'])
 portfolio.config(['ChartJsProvider', function (ChartJsProvider) {
     // Configure all charts
     ChartJsProvider.setOptions({
-      responsive: false,
+      // responsive: false,
       datasetFill: true
     });
     // Configure all line charts
@@ -15,26 +15,24 @@ portfolio.config(['ChartJsProvider', function (ChartJsProvider) {
 portfolio.controller('portfolioController', portfolioController);
 
 function portfolioController($scope, $http) {
-  $scope.stocks = 60;
-  $scope.bonds = 100 - $scope.stocks;
-
-  $scope.pieData = [$scope.stocks, $scope.bonds];
+  $scope.capital = 10000;
+  $scope.investSplit = [60, 40];
   $scope.pieLabels = ['Stocks', 'Bonds'];
 
-  $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
+  $scope.labels = [2016, 2017, 2018, 2019, 2020];
   $scope.series = ['Series A', 'Series B'];
   $scope.data = [
-    [$scope.stocks, 59, 80, 81, 56, 55, 40],
-    [$scope.bonds, 48, 40, 19, 86, 27, 90]
+    [$scope.investSplit[0], 59, 80, 81, 56, 55, 40],
+    [$scope.investSplit[1], 48, 40, 19, 86, 27, 90]
   ];
   $scope.onClick = function (points, evt) {
     console.log(points, evt);
   };
 
-  $scope.save = function(stocks, bonds) {
+  $scope.save = function(investSplit) {
     var portfolio = {
-      stocks: stocks,
-      bonds: bonds
+      stocks: investSplit[0],
+      bonds: investSplit[1]
     }
     return $http({
       method: 'POST',
