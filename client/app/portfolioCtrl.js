@@ -16,7 +16,6 @@ portfolio.controller('portfolioController', portfolioController);
 
 function portfolioController($scope, $http, ngDialog) {
   $scope.data = {};
-  $scope.data.capital = 10000;
   $scope.investSplit = [60, 40];
   $scope.pieLabels = ['Stocks', 'Bonds'];
 

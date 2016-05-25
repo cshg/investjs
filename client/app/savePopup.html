@@ -1,17 +1,36 @@
 <div style="padding: 15px">
   <h3>New Portfolio created!</h3>
-  <div style="margin: 15px">
+  <div style="margin: 5px">
     Your portfolio will be saved with the following allocation:
   </div>
 
-  <ul class="list-group" style="margin: 15px">
-    <!-- <li class="list-group-item">Risk profile: high</li> -->
-    <li class="list-group-item">{{portfolio.stocks.total * 100}}$ in Stocks</li>
-    <li class="list-group-item">{{portfolio.bonds.total * 100}}$ in Bonds</li>
+  <ul>
+    <li>${{portfolio.stocks.total/100 * portfolio.capital}} invested in Stocks</li>
+    <li>${{portfolio.bonds.total/100 * portfolio.capital}} invested in Bonds</li>
   </ul>
 
-  <div style="margin: 15px">
+  <div style="margin: 10px">
     Here a proposal of assets to realize this investment:
+    <ul class="list-group" style="margin: 15px">
+      <li class="list-group-item">
+        Stocks (US Market - Core): ${{0.8 * portfolio.stocks.total/100 * portfolio.capital}}
+        <ul>
+          <li> <a href="https://personal.vanguard.com/us/funds/snapshot?FundIntExt=INT&FundId=0970">Vanguard Total Market ETF</a></li>
+        </ul>
+      </li>
+      <li class="list-group-item">
+        Stocks (Emerging Markets Satellite): ${{0.2 * portfolio.stocks.total/100 * portfolio.capital}}
+        <ul>
+          <li> <a href="https://www.ishares.com/us/products/244050/ishares-core-msci-emerging-markets-etf">iShares MSCI Emerging Market ETF</a></li>
+        </ul>
+      </li>
+      <li class="list-group-item">
+        Bonds (International diversification): ${{portfolio.bonds.total/100 * portfolio.capital}}
+        <ul>
+          <li> <a href="https://personal.vanguard.com/us/funds/snapshot?FundId=3711&FundIntExt=INT"> Vanguard International Bond</a> </li>
+        </ul  >
+      </li>
+    </ul>
   </div>
 
   <div style="margin: 15px">
