@@ -33,7 +33,7 @@ module.exports = {
       from: '"InvestJS" <info@investjs.com>', // sender address
       to: 'christian.s.haug@gmail.com', // list of receivers
       subject: 'Your new Portfolio', // Subject line
-      html: 'Your new Portfolio has been created. To use your newly created strategy make the following investments: ' + req.body.stocks.total + ' in Stocks and ' + req.body.stocks.total + ' in bonds.'
+      html: 'Your new Portfolio has been created. To use your newly created strategy buy the following assets: $' + req.body.stocks.total/100*req.body.capital*0.8 + ' in <a href="https://personal.vanguard.com/us/funds/snapshot?FundIntExt=INT&FundId=0970">Vanguard Total Market ETF</a>, $' + req.body.stocks.total/100*req.body.capital*0.2 + ' in <a href="https://www.ishares.com/us/products/244050/ishares-core-msci-emerging-markets-etf">iShares MSCI Emerging Market ETF</a> and $' + req.body.bonds.total/100*req.body.capital + ' in <a href="https://personal.vanguard.com/us/funds/snapshot?FundId=3711&FundIntExt=INT"> Vanguard International Bond</a>.'
       };
     client.sendMail(email, function(err, info) {
       if (err) {

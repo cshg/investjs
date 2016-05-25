@@ -58,7 +58,7 @@ function portfolioController($scope, $http, ngDialog) {
       data: portfolio
     })
     .then(function(res) {
-      console.log('Portfolio sent', portfolio);
+      console.log('Portfolio saved: ', portfolio);
       return res;
     });
   };

@@ -1,11 +1,9 @@
 var express = require('express');
-var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var reqHandler = require('./request-handler');
 
 var app = express();
 
-// app.use(morgan('combined'));
 app.use(express.static('client'));
 app.use(bodyParser.json());
 
