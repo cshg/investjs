@@ -22,33 +22,22 @@ $ npm start
 
 ## Tech
  - AngularJS
+ - Angular ui-router
  - Chartjs
+ - nodemailer
  - Node
  - Express
 
 ## Directory Layout
 ```
-├── /env/                       # Environment variables
 ├── /node_modules/              # 3rd-party libraries and utilities
 ├── /client/                    # Client React-Redux Entry Points
-├── /common/                    # Universal React Components & Redux State Management
 ├── /server/                    # Server source
-│   ├── /config/                # Initial server configuration
-│   ├── /lib/                   # Utilities
-│   ├── /routes/                # Routes
-│   │   ├── auth-routes         # PassportJS Facebook OAuth endpoints
-│   │   └── jade-only-routes    # Server-side rendering - only Jade
-│   │   └── react-redux-routes  # Server-side rendering - Jade + React + Redux
-│   ├── /views/                 # Jade templates
+│   └── portfolioController.js  # Express application entry point
+│   └── portfolioModel.js       # Express application entry point
+│   └── requestHandler.js       # Express application entry point
 │   └── server.js               # Express application entry point
-├── /dist/                      # Distribution
-│   ├── /fonts/                 # Fonts
-│   ├── /js/                    # Bundled Client React-Redux Entry Points
-│   ├── /style/                 # CSS
-│   └── server.bundle.js        # Bundled Express Server
-├── package.json                # npm dependencies, scripts, and package info
-├── webpack.config.js           # Webpack Configurations
-└── .eslintrc                   # ESLint settings
+└── package.json                # npm dependencies, scripts, and package info
 ```
 
 ## Contributing
