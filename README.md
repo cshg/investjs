@@ -31,12 +31,21 @@ $ npm start
 ## Directory Layout
 ```
 ├── /node_modules/              # 3rd-party libraries and utilities
-├── /client/                    # Client React-Redux Entry Points
+├── /client/                    # Client Angular Entry Points
+│   ├── /app/                   # Main application folder
+│   │   └── app.js              # Main application entry point
+│   │   └── portfolio.html      # Portfolio html view
+│   │   └── portfolioCtrl.js    # Portfolio controller functions
+│   │   └── savePopup.html      # Popup html view
+│   ├── /assets/                # Static assets to be served
+│   ├── /bower_components/      # 3rd-party libraries and utilities
+│   └── savePopup.html          # Express application entry point
 ├── /server/                    # Server source
-│   └── portfolioController.js  # Express application entry point
-│   └── portfolioModel.js       # Express application entry point
-│   └── requestHandler.js       # Express application entry point
+│   └── portfolioController.js  # Controller functions for incoming requests
+│   └── portfolioModel.js       # Database interactions
+│   └── requestHandler.js       # Incoming request routing
 │   └── server.js               # Express application entry point
+└── bower.json                  # bower dependencies, scripts, and package info
 └── package.json                # npm dependencies, scripts, and package info
 ```
 
