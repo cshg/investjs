@@ -21,12 +21,16 @@ $ npm start
 ```
 
 ## Tech
+
+Frontend:
  - AngularJS
- - Angular ui-router
- - Chartjs
+ - Angular UI-Router
+ - Chart.js
+Backend:
+ - Node.js
+ - Express.js
  - nodemailer
- - Node
- - Express
+ -  MongoDB
 
 ## Directory Layout
 ```
