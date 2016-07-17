@@ -26,6 +26,7 @@ Frontend:
  - AngularJS
  - Angular UI-Router
  - Chart.js
+
 Backend:
  - Node.js
  - Express.js
